@@ -35,6 +35,7 @@ class DataType(Enum):
 class DatasetType(Enum):
     GEN1 = auto()
     GEN4 = auto()
+    ROBOHANDS = auto()
 
 
 class DatasetMode(Enum):

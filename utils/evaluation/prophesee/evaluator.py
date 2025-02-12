@@ -8,6 +8,7 @@ from utils.evaluation.prophesee.evaluation import evaluate_list
 LABELMAP = {
     'gen1': ('car', 'ped'),
     'gen4': ('ped', 'cyc', 'car'),
+    'robohands': ('hand'),
 }
 
 
@@ -28,7 +29,7 @@ class PropheseeEvaluator:
 
     def __init__(self, dataset: str, downsample_by_2: bool):
         super().__init__()
-        assert dataset in {'gen1', 'gen4'}
+        assert dataset in {'gen1', 'gen4', 'robohands'}
         self.dataset = dataset
         self.label_map = get_labelmap(dataset)
         self.downsample_by_2 = downsample_by_2

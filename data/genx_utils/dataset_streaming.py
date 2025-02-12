@@ -159,6 +159,8 @@ def get_sequences(
         dataset_type = DatasetType.GEN1
     elif dataset_config.name == 'gen4':
         dataset_type = DatasetType.GEN4
+    elif dataset_config.name == 'robohands':
+        dataset_type = DatasetType.ROBOHANDS
     else:
         raise NotImplementedError
 

@@ -15,7 +15,7 @@ def dynamically_modify_train_config(config: DictConfig):
 
         dst_cfg = config.dataset
         dst_name = dst_cfg.name
-        assert dst_name in {'gen1', 'gen4'}, f'{dst_name=} not supported'
+        assert dst_name in {'gen1', 'gen4', 'robohands'}, f'{dst_name=} not supported'
         num_classes = 2 if dst_name == 'gen1' else 3
         dst_cfg.num_classes = num_classes
         dataset_hw = get_dataloading_hw(dataset_config=dst_cfg)

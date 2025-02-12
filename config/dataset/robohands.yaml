@@ -1,0 +1,10 @@
+defaults:
+  - base
+
+name: robohands
+path: /cfs/earth/scratch/cacc/Datasets/leod_dataset
+ev_repr_name: 'stacked_histogram_dt=10_nbins=10'
+sequence_length: 21
+resolution_hw: [720, 1270] 
+downsample_by_factor_2: False
+only_load_end_labels: False
